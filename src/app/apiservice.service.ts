@@ -1,5 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
+import {Moviesdata} from 'src/app/models/toprated.model'
+import { Observable } from 'rxjs';
+
+
+
 
 
 @Injectable({
@@ -16,12 +21,13 @@ export class ApiserviceService {
 
     constructor(private _http:HttpClient) { }
 
-      getToprated(){
-        return this._http.get(this.toprate);
+      getToprated():Observable<Moviesdata[]>{
+        return this._http.get<Moviesdata[]>(this.toprate);
       }
-      getupcoming(){
-        return this._http.get(this.upcoming);
+      getupcoming():Observable<Moviesdata[]>{
+        return this._http.get<Moviesdata[]>(this.upcoming);
       }
+
 
 
 }

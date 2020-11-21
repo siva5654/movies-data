@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { NgxSpinnerService } from "ngx-spinner";
-import {ApiserviceService} from 'src/app/apiservice.service'
+import {ApiserviceService} from 'src/app/apiservice.service';
+import {Moviesdata} from 'src/app/models/toprated.model'
+import { Observable } from 'rxjs';
+
+
+
 
 
 @Component({
@@ -9,8 +14,11 @@ import {ApiserviceService} from 'src/app/apiservice.service'
   styleUrls: ['./upcoming.component.css']
 })
 export class UpcomingComponent implements OnInit {
-public comingmovies:any =[];
-public imageUrl ="https://image.tmdb.org/t/p/w500"
+
+  public imageUrl ="https://image.tmdb.org/t/p/w500"
+  results:any=[];
+  comingmovies:Moviesdata[] =[];
+
 
   constructor(private apiservice:ApiserviceService , private spinner:NgxSpinnerService) { }
 
@@ -20,10 +28,9 @@ public imageUrl ="https://image.tmdb.org/t/p/w500"
   }
   upcomingMoives(){
     this.spinner.show();
-    this.apiservice.getupcoming().subscribe((res:any) => {
+    this.apiservice.getupcoming().subscribe((res:Moviesdata[]) => {
       this.comingmovies = res.results;
       this.spinner.hide();
-      console.log(res.results)
     },
     err=>{
       console.log("error");
