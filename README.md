@@ -1,8 +1,8 @@
 # imports:
 
 * bootstrap( for using css)
-* jQuery (for using bootstrap support)
-* ngx spinner(spinner service)
+* jQuery (for using bootstrap support) ---npm i ngx-spinner
+* ngx spinner(spinner service) --- npm i ngx-spinner
 
 
 # Movies
