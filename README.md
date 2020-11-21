@@ -1,3 +1,10 @@
+# imports:
+
+* bootstrap( for using css)
+* jQuery (for using bootstrap support) ---npm i ngx-spinner
+* ngx spinner(spinner service) --- npm i ngx-spinner
+
+
 # Movies
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
