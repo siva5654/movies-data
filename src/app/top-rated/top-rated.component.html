@@ -1,0 +1,21 @@
+
+<div class="container">
+  <h1 class="text-center title-test">Top Rated Movies</h1>
+  <div class="row">
+    <div class="col-sm-6 col-md-3 col-xm-4 product-grid" *ngFor = "let movie of ratedMovies">
+        <div class="movielist" style="border:1px solid #0062cc">
+          <div class="posterimg-into">
+            <p class="poster-rating">{{movie.vote_average}}<span>&#9733;</span></p>
+            <p><img  class="posterimg"src="{{imageUrl}}{{movie.poster_path}}" alt=""></p>
+          </div>
+          <div class="moive-info">
+            <p title="{{movie.title}}">{{movie.title}}</p>
+            <p>Release Date :<span class="bold">{{movie.release_date}}</span> </p>
+
+            <p>language :<span class="bold">{{movie.original_language}}</span> </p>
+            <p>popularity :<span class="bold">{{movie.popularity}}</span> </p>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

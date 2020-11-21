@@ -1,0 +1,85 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+  font-family: 'Poppins', sans-serif!important;
+  position: relative;
+}
+img{
+  max-width: 100%;
+}
+*{
+  padding: 0px ;
+  margin: 0px;
+}
+p{
+  margin-bottom: 0px!important;
+}
+
+/* global css for using top rated and upcoming movies components */
+
+
+.bold{
+  font-weight: bold;
+  padding-left: 4px;
+  font-size: 12px;
+}
+img{
+  height: 250px;
+  width: 100%;
+}
+.title-test{
+  font-size: 32px;
+  margin: 24px auto;
+}
+.product-grid{
+  margin: 12px 0;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.product-grid:hover{
+  transform: scale(1.03);
+}
+.posterimg-into{
+  position: relative;
+}
+.movielist{
+  padding: 12px;
+}
+.moive-info{
+  margin-top: 16px;
+}
+.moive-info >p{
+  font-size: 12px;
+}
+
+.moive-info >p:first-child{
+  font-size: 14px;
+  height: 60px;
+  overflow: hidden;
+  cursor: pointer;
+  font-weight: bold;
+}
+.sideinfo{
+  margin: 12px auto;
+}
+.sideinfo > div{
+  padding: 0px!important
+}
+.poster-rating {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    background-color: #0062cc;
+    border-radius: 50%;
+    line-height: 42px;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+    right: 12px;
+    top: 12px;
+}
+
+.poster-rating >span{
+    font-size: 10px;
+    color: #ffd804;
+    padding-left: 2px;
+}
