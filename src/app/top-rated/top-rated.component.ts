@@ -20,7 +20,7 @@ export class TopRatedComponent implements OnInit {
   }
   topMoives(){
     this.spinner.show();
-    this.apiservice.getToprated().subscribe((res:Moviesdata[]) =>{
+    this.apiservice.getToprated().subscribe((res:any) =>{
       this.ratedMovies = res.results;
       this.spinner.hide();
       console.log(res);

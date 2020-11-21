@@ -28,7 +28,7 @@ export class UpcomingComponent implements OnInit {
   }
   upcomingMoives(){
     this.spinner.show();
-    this.apiservice.getupcoming().subscribe((res:Moviesdata[]) => {
+    this.apiservice.getupcoming().subscribe((res:any) => {
       this.comingmovies = res.results;
       this.spinner.hide();
     },
